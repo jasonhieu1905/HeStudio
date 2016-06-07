@@ -13,6 +13,7 @@
 
 
 	<context:component-scan base-package="com.hestudio.controller" />
+	<context:component-scan base-package="com.hestudio.rest" />
 
 	<bean class="org.springframework.jdbc.datasource.DriverManagerDataSource"
 		id="dataSource">
@@ -28,8 +29,16 @@
 		<property name="dataSource" ref="dataSource"></property>
 		<property name="annotatedClasses">
 			<list>
-				<!-- <value>com.machine.model.User</value> -->
-			
+				<value>com.hestudio.model.Access</value>
+				<value>com.hestudio.model.Banner</value>
+				<value>com.hestudio.model.Category</value>
+				<value>com.hestudio.model.Contact</value>
+				<value>com.hestudio.model.Logo</value>
+				<value>com.hestudio.model.Message</value>
+				<value>com.hestudio.model.Privilege</value>
+				<value>com.hestudio.model.Product</value>
+				<value>com.hestudio.model.Role</value>
+				<value>com.hestudio.model.User</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">
@@ -39,6 +48,30 @@
 				<prop key="hibernate.hbm2ddl.auto">update</prop>
 			</props>
 		</property>
+	</bean>
+	
+	<bean id="userService" class="com.hestudio.serviceimpl.UserServiceImpl">
+		<property name="userDAO" ref="userDAO"></property>
+	</bean>
+
+	<bean id="userDAO" class="com.hestudio.daoimpl.UserDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	
+	<bean id="logoService" class="com.hestudio.serviceimpl.LogoServiceImpl">
+		<property name="logoDAO" ref="logoDAO"></property>
+	</bean>
+
+	<bean id="logoDAO" class="com.hestudio.daoimpl.LogoDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	
+	<bean id="contactService" class="com.hestudio.serviceimpl.ContactServiceImpl">
+		<property name="contactDAO" ref="contactDAO"></property>
+	</bean>
+
+	<bean id="contactDAO" class="com.hestudio.daoimpl.ContactDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
 	</bean>
 
 	<tx:annotation-driven transaction-manager="hibernateTransactionManager" />
