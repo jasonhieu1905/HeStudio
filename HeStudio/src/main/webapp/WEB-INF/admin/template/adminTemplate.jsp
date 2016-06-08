@@ -27,6 +27,8 @@
 <body>
 	<script src="<c:url value="/resources/js/common/jquery-1.10.2.js" />"></script>
 	<script src="<c:url value="/resources/js/common/bootstrap.min.js" />"></script>
+	<script src="<c:url value='/resources/js/common/angular.js' />"></script>
+	
 	<div id="wrapper">
 		<!-- Header -->
 		<div>

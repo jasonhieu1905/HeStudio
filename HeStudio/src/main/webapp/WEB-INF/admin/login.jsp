@@ -2,20 +2,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link href="<c:url value="/resources/css/bootstrap.css" />"
-	rel="stylesheet" />
 <link href="<c:url value="/resources/css/login.css" />" rel="stylesheet" />
-<script src="<c:url value="/resources/js/jquery-1.10.2.js" />"></script>
+
 <script src="<c:url value="/resources/js/admin/login.js" />"></script>
 
-<script src="<c:url value='/resources/js/common/angular.js' />"></script>
 <script src="<c:url value='/resources/js/admin/app.js' />"></script>
-<script src="<c:url value='/resources/js/admin/service/user_service.js' />"></script>
-<script src="<c:url value='/resources/js/admin/controller/user_controller.js' />"></script>
+<script
+	src="<c:url value='/resources/js/admin/service/user_service.js' />"></script>
+<script
+	src="<c:url value='/resources/js/admin/controller/user_controller.js' />"></script>
 
 
 <title>Login Page</title>
@@ -40,12 +40,20 @@
 									role="form" style="display: block;">
 									<div class="form-group">
 										<input type="text" name="username" id="username" tabindex="1"
-											class="form-control" placeholder="Username" value="">
+											required="required" class="form-control"
+											placeholder="Username" value="">
 									</div>
 									<div class="form-group">
 										<input type="password" name="password" id="password"
-											tabindex="2" class="form-control" placeholder="Password">
+											required="required" tabindex="2" class="form-control"
+											placeholder="Password">
 									</div>
+									<c:if test="${not empty error}">
+										<div class="alert alert-danger fade in">
+											<a href="#" class="close" data-dismiss="alert">&times;</a>
+											${error}
+										</div>
+									</c:if>
 									<div class="form-group">
 										<div class="row">
 											<div class="col-sm-6 col-sm-offset-3">

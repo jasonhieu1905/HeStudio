@@ -12,7 +12,7 @@ public class UserDAOImpl extends AbstractDAOImpl implements UserDAO{
 
 	public User getUserByUsername(String username) {
 		@SuppressWarnings("unchecked")
-		List<User> users = getSession().getNamedQuery("User.findByUsername").list(); 
+		List<User> users = getSession().getNamedQuery("User.findByUsername").setParameter("username", username).list(); 
 		if(users.size() != 0){
 			return users.get(0);
 		}
