@@ -2,16 +2,17 @@
  
 var app = angular.module('hestudio',['ngRoute']);
 
-app.controller('appCtrl', function ($rootScope,$location) {
+app.controller('appCtrl', function ($rootScope,$location,loginService) {
 	
-
 });
 
 app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
-    //$locationProvider.html5Mode(true);
     $routeProvider
         .when('/home', {
             template: "<home></home>"
+        })
+        .when('/login', {
+            template: "<login></login>"
         })
         .when('/', {
             template: "<login></login>"
@@ -19,4 +20,6 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
         .otherwise({
             redirectTo: '/'
         });
+    //$locationProvider.html5Mode(true);
+    
 }])

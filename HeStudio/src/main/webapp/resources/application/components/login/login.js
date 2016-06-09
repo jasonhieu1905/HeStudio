@@ -1,26 +1,37 @@
-app.directive('demo', function(demoService) {
-	return {
-		restrict : 'AE',
-		replace : true,
-		templateUrl : 'resources/components/demo/demo.jsp',
-		scope : {},
-		controller : function($scope, $element) {
-			var self = this;
-			self.user = {};
-			self.users = [];
+app.directive('login', function (loginService, $location) {
+    return {
+        restrict: 'AE',
+        replace: true,
+        templateUrl: 'resources/application/components/login/login.jsp',
+        scope: {},
+        controller: function ($scope, $element) {
+            $scope.submit = function ($event) {
+            	$event.preventDefault();
+                $scope.login.$setDirty;
+                if ($scope.login.$valid) {
+                    var info = {
+                        username: $scope.username,
+                        password: $scope.password,
+                        id: ""
+                    };
+                    loginService.loginWithUsername(info).then(function (data) {
+                        if(data){
+                        	$location.path("/home")
+                        	$scope.errorMessage="";
+                        }else{
+                        	$scope.errorMessage = "Try it again!"
+                        	alert("try again!");
+                        }
+                        
+                    },function(reson){
+                    	$scope.errorMessage = "Try it again!"
+                    });
+                }
 
-			self.fetchAllUsers = function() {
-				demoService.fetchAllUsers().then(function(d) {
-					self.users = d;
-				}, function(errResponse) {
-					console.error('Error while fetching Currencies');
-				});
-			};
+            }
+        },
+        link: function () {
 
-			self
-		},
-		link : function() {
-
-		}
-	}
+        }
+    }
 });
