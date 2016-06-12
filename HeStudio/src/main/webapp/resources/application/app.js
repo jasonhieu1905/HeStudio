@@ -15,11 +15,11 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
             template: "<login></login>"
         })
         .when('/', {
-            template: "<login></login>"
+            template: "<home></home>"
         })
         .otherwise({
             redirectTo: '/'
         });
     //$locationProvider.html5Mode(true);
     
-}])
+}]);
