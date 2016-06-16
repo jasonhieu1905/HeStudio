@@ -29,11 +29,6 @@
                         </a>
                     </div>
                 </div>
-                 <%--<div class="sdt_box_children">--%>
-                       <%--<a ng-repeat="s2 in item.sub2" >--%>
-                        <%--{{s2.title}}--%>
-                        <%--</a>--%>
-                 <%--</div>--%>
             </li>
 		</ul>
 	</div>

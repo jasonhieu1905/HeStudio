@@ -20,6 +20,9 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
         .when('/', {
             template: "<login></login>"
         })
+        .when('/adminprofile', {
+            template: "<adminprofile></adminprofile>"
+        })
         .otherwise({
             redirectTo: '/'
         });

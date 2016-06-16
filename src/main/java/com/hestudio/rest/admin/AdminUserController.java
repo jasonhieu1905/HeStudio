@@ -20,14 +20,14 @@ public class AdminUserController {
 	UserService userService;
 	
 	@RequestMapping(value="/users",method = RequestMethod.GET)
-	public ResponseEntity<Boolean> login(@RequestParam String username, @RequestParam String password){
+	public ResponseEntity<User> login(@RequestParam String username, @RequestParam String password){
 		
 		HttpHeaders httpHeaders = new HttpHeaders();	
 		User loggedUser = userService.findUserByUserName(username);
 		if(loggedUser!= null){
-			return new ResponseEntity<Boolean>(true,httpHeaders,HttpStatus.OK);
+			return new ResponseEntity<User>(loggedUser,httpHeaders,HttpStatus.OK);
 		}
-		return new ResponseEntity<Boolean>(false,httpHeaders,HttpStatus.OK);
+		return new ResponseEntity<User>(null,httpHeaders,HttpStatus.OK);
 	}
 	
 }

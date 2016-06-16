@@ -38,6 +38,7 @@
 	<script src="<c:url value='resources/application/app.js' />"></script>
 	<script src="<c:url value='resources/application/components/login/login.js' />"></script>
 	<script src="<c:url value='resources/application/components/admin_home/home.js' />"></script>
+	<script src="<c:url value='resources/application/components/admin_profile/profile.js' />"></script>
 	<script src="<c:url value='resources/js/admin/metisMenu.min.js' />"></script>
 	<script src="<c:url value='resources/js/admin/morris.min.js' />"></script>
 	<script src="<c:url value='resources/js/admin/raphael-min.js' />"></script>
