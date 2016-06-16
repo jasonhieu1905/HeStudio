@@ -1,15 +1,15 @@
-app.directive('adminprofile', function ($rootScope) {
+app.directive('adminprofile', function ($cookieStore) {
     return {
         restrict: 'AE',
         replace: true,
         templateUrl: 'resources/application/components/admin_profile/profile.jsp',
         scope: {},
-        controller: function ($scope, $element,$rootScope) {
+        controller: function ($scope,$cookieStore) {
         	debugger;
-        	var user = $rootScope.user;
+        	var user = $cookieStore.get("username");
         	$scope.username = user.username;
-        	$scope.password = $rootScope.password;
-        	$scope.passwordRetype = $rootScope.password;
+        	$scope.password = $cookieStore.get("password");
+        	$scope.passwordRetype = $cookieStore.get("password");
         },
         link: function () {
 

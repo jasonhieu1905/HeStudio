@@ -31,6 +31,7 @@ import javax.persistence.Table;
 @Table(name = "category")
 @NamedQueries({
     @NamedQuery(name = "Category.findAll", query = "SELECT c FROM Category c"),
+    @NamedQuery(name = "Category.findByParent", query = "SELECT c FROM Category c WHERE c.type = 1"),
     @NamedQuery(name = "Category.findById", query = "SELECT c FROM Category c WHERE c.id = :id"),
     @NamedQuery(name = "Category.findByName", query = "SELECT c FROM Category c WHERE c.name = :name"),
     @NamedQuery(name = "Category.findByPriorityId", query = "SELECT c FROM Category c WHERE c.priorityId = :priorityId"),
@@ -42,15 +43,27 @@ public class Category implements Serializable {
     @Basic(optional = false)
     @Column(name = "id")
     private Integer id;
+    
     @Basic(optional = false)
     @Column(name = "name")
     private String name;
+    
     @Basic(optional = false)
     @Column(name = "priorityId")
     private int priorityId;
+    
     @Basic(optional = false)
     @Column(name = "type")
     private int type;
+    
+    @Basic(optional = false)
+    @Column(name = "image")
+    private int image;
+    
+    @Basic(optional = false)
+    @Column(name = "images")
+    private int images;
+    
     @OneToMany(mappedBy = "categoryId", fetch = FetchType.EAGER)
     private List<Product> productList;
     @OneToMany(mappedBy = "parentId", fetch = FetchType.EAGER)
@@ -66,14 +79,22 @@ public class Category implements Serializable {
         this.id = id;
     }
 
-    public Category(Integer id, String name, int priorityId, int type) {
-        this.id = id;
-        this.name = name;
-        this.priorityId = priorityId;
-        this.type = type;
-    }
 
-    public Integer getId() {
+    public Category(Integer id, String name, int priorityId, int type, int image, int images, List<Product> productList,
+			List<Category> categoryList, Category parentId) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.priorityId = priorityId;
+		this.type = type;
+		this.image = image;
+		this.images = images;
+		this.productList = productList;
+		this.categoryList = categoryList;
+		this.parentId = parentId;
+	}
+
+	public Integer getId() {
         return id;
     }
 
@@ -104,8 +125,25 @@ public class Category implements Serializable {
     public void setType(int type) {
         this.type = type;
     }
+    
 
-    public List<Product> getProductList() {
+    public int getImage() {
+		return image;
+	}
+
+	public void setImage(int image) {
+		this.image = image;
+	}
+
+	public int getImages() {
+		return images;
+	}
+
+	public void setImages(int images) {
+		this.images = images;
+	}
+
+	public List<Product> getProductList() {
         return productList;
     }
 

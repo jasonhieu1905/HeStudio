@@ -1,4 +1,4 @@
-app.directive('login', function (loginService, $location,$rootScope) {
+app.directive('login', function (loginService, $location,$cookieStore) {
     return {
         restrict: 'AE',
         replace: true,
@@ -16,8 +16,8 @@ app.directive('login', function (loginService, $location,$rootScope) {
                     };
                     loginService.loginWithUsername(info).then(function (data) {
                         if(data){
-                        	$rootScope.user = data;
-                        	$rootScope.password = $scope.password
+                        	$cookieStore.put("user",data);
+                        	$cookieStore.put("password", $scope.password);
                         	$location.path("/adminhome")
                         	$scope.errorMessage="";
                         }else{

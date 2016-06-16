@@ -31,16 +31,23 @@
 			<form id="myform" action="">
 				<div class="form-group">
 					<label for="name">Username :</label> <input type="text"
-						id="username" ng-model="username" class="form-control" />
+						id="username" ng-show="myForm.uname.$error.required"
+						ng-model="username" class="form-control" />
+					<div class="has-error" ng-show="myForm.$dirty">
+						<span ng-show="myForm.uname.$error.required">This is a
+							required field</span> <span ng-show="myForm.uname.$invalid">This
+							field is invalid </span>
+					</div>
 				</div>
 				<div class="form-group">
 					<label for="name">Password :</label> <input id="password"
-						type="password" ng-model="password" class="form-control" />
+						type="password" ng-show="myForm.uname.$error.required"
+						ng-model="password" class="form-control" />
 				</div>
 				<div class="form-group">
 					<label for="name">Password-Retype :</label> <input
-						id="passwordRetype" type="password" ng-model="passwordRetype"
-						class="form-control" />
+						id="passwordRetype" ng-show="myForm.uname.$error.required"
+						type="password" ng-model="passwordRetype" class="form-control" />
 				</div>
 				<button type="submit" id="updatePassword" class="btn btn-default">Update</button>
 			</form>
