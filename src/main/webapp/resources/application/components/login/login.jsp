@@ -24,6 +24,7 @@
 									<input type="text" required="required" ng-model="username"
 										name="username" id="username" tabindex="1"
 										class="form-control" placeholder="Username" value="">
+									
 								</div>
 								<div class="form-group">
 									<input type="password" required="required" ng-model="password"

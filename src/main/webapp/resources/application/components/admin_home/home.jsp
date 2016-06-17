@@ -14,11 +14,9 @@
 			<a class="navbar-brand" href="index.html">Hè Studio</a>
 		</div>
 		<!-- /.navbar-header -->
-
-		<div ng-include src="'resources/application/components/admin_header/header.jsp'" ></div>
 		
-		<div ng-include src="'resources/application/components/admin_left/left.jsp'" ></div>
-		
+		<admin-header></admin-header>
+		<admin-left></admin-left>		
 	</nav>
 
 	<div id="page-wrapper">

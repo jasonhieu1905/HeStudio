@@ -14,8 +14,8 @@
 			<a class="navbar-brand" href="index.html">Hè Studio</a>
 		</div>
 		<!-- /.navbar-header -->
-		<header></header>
-		<left></left>
+		<admin-header></admin-header>
+		<admin-left></admin-left>	
 	</nav>
 	<div id="page-wrapper">
 		<div class="row">
@@ -27,25 +27,23 @@
 			<form id="myform" action="">
 				<div class="form-group">
 					<label for="name">Username :</label> <input type="text"
-						id="username" ng-show="myForm.uname.$error.required"
+						id="username" 
 						ng-model="username" class="form-control" />
-					<div class="has-error" ng-show="myForm.$dirty">
-						<span ng-show="myForm.uname.$error.required">This is a
-							required field</span> <span ng-show="myForm.uname.$invalid">This
-							field is invalid </span>
-					</div>
+					<div ng-show="error" class="alert alert-danger">{{errorUsername}}</div>	
 				</div>
 				<div class="form-group">
 					<label for="name">Password :</label> <input id="password"
-						type="password" ng-show="myForm.uname.$error.required"
+						type="password" 
 						ng-model="password" class="form-control" />
+					<div ng-show="error" class="alert alert-danger">{{errorPassword}}</div>		
 				</div>
 				<div class="form-group">
 					<label for="name">Password-Retype :</label> <input
-						id="passwordRetype" ng-show="myForm.uname.$error.required"
+						id="passwordRetype" 
 						type="password" ng-model="passwordRetype" class="form-control" />
+					<div ng-show="error" class="alert alert-danger">{{errorPasswordMatch}}</div>		
 				</div>
-				<button type="submit" id="updatePassword" class="btn btn-default">Update</button>
+				<button type="submit" ng-click="submit($event)" id="updatePassword" class="btn btn-default">Update</button>
 			</form>
 		</div>
 	</div>

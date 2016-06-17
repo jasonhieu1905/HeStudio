@@ -1,8 +1,8 @@
-app.directive('left', function () {
+app.directive('adminHeader', function () {
     return {
         restrict: 'AE',
         replace: true,
-        templateUrl: 'resources/application/components/admin_left/left.jsp',
+        templateUrl: 'resources/application/components/admin_header/header.jsp',
         scope: {},
         controller: function ($scope, $element) {
 

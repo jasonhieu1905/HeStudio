@@ -61,7 +61,13 @@
 	<script
 		src="<c:url value='resources/application/components/admin_home/home.js' />"></script>
 	<script
-		src="<c:url value='resources/application/components/admin_profile/profile.js' />"></script>
+		src="<c:url value='resources/application/components/admin_header/admin-header.js' />"></script>
+	<script
+		src="<c:url value='resources/application/components/admin_left/admin-left.js' />"></script>		
+	<script
+		src="<c:url value='resources/application/components/admin_profile/admin-profile.js' />"></script>
+		
+	<!-- Link to Admin Resources -->	
 	<script src="<c:url value='resources/js/admin/metisMenu.min.js' />"></script>
 	<script src="<c:url value='resources/js/admin/morris.min.js' />"></script>
 	<script src="<c:url value='resources/js/admin/raphael-min.js' />"></script>
@@ -78,6 +84,6 @@
 	<script
 		src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-cookies.js"></script>
 	<script>
-		</body>
-		</html>
-	
+</script>
+</body>
+</html>
