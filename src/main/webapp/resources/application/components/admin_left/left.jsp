@@ -15,20 +15,20 @@
 			</li>
 			<li><a
 				href="${pageContext.request.contextPath}/listAllCategories"><i
-					class="fa fa-tasks"></i> Home</a>
+					class="fa fa-tasks"></i> Home</a></li>
 			<li><a href="${pageContehxt.request.contextPath}/products"><i
 					class="fa fa-gift"></i> Shop</a></li>
 
 			<li><a href="${pageContext.request.contextPath}/admin/contact"><i
-					class="fa fa-map-marker "></i> Trend</a>
+					class="fa fa-map-marker "></i> Trend</a></li>
 			<li><a href="${pageContext.request.contextPath}/adminAllAccess"><i
 					class="fa fa-users"></i> Stories</a>
 			<li><a href="${pageContext.request.contextPath}/adminBanner"><i
-					class="fa fa-picture-o"></i> Banner</a>
+					class="fa fa-picture-o"></i> Banner</a></li>
 			<li><a href="${pageContext.request.contextPath}/adminMessage"><i
-					class="fa fa-envelope-o"></i> Hộp thư khách hàng</a>
-			<li><a href="#/adminprofile"><i
-					class="fa fa-user"></i> Manage User Profile</a>
+					class="fa fa-envelope-o"></i> Hộp thư khách hàng</a></li>
+			<li><a ng-href="#/adminprofile"><i class="fa fa-user"></i>
+					Manage User Profile</a></li>
 		</ul>
 	</div>
 	<!-- /.sidebar-collapse -->
