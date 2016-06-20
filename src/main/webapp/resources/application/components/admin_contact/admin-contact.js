@@ -1,5 +1,4 @@
-app
-		.directive(
+app.directive(
 				'adminContact',
 				function(contactService, $cookieStore) {
 					return {
