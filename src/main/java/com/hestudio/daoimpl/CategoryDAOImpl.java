@@ -15,4 +15,16 @@ public class CategoryDAOImpl extends AbstractDAOImpl implements CategoryDAO {
 		return getSession().getNamedQuery("findByParent").list();
 	}
 
+	public void addCategory(Category category) {
+		getSession().persist(category);
+	}
+
+	public void updateCategory(Category category) {
+		getSession().update(category);
+	}
+
+	public void deleteCategory(Category category) {
+		getSession().delete(category);		
+	}
+
 }

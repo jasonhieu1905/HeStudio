@@ -24,4 +24,18 @@ public class CategoryServiceImpl  implements CategoryService{
 		return categoryDAO.listCategoryParent();
 	}
 
+	public void addCategory(Category category) {
+		categoryDAO.addCategory(category);
+	}
+
+	public void updateCategory(Category category) {
+		categoryDAO.updateCategory(category);
+	}
+
+	public void deleteCategory(Category category) {
+		categoryDAO.deleteCategory(category);
+	}
+	
+	
+
 }

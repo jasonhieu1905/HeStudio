@@ -58,11 +58,11 @@ public class Category implements Serializable {
     
     @Basic(optional = false)
     @Column(name = "image")
-    private int image;
+    private String image;
     
     @Basic(optional = false)
     @Column(name = "images")
-    private int images;
+    private String images;
     
     @OneToMany(mappedBy = "categoryId", fetch = FetchType.EAGER)
     private List<Product> productList;
@@ -79,9 +79,8 @@ public class Category implements Serializable {
         this.id = id;
     }
 
-
-    public Category(Integer id, String name, int priorityId, int type, int image, int images, List<Product> productList,
-			List<Category> categoryList, Category parentId) {
+	public Category(Integer id, String name, int priorityId, int type, String image, String images,
+			List<Product> productList, List<Category> categoryList, Category parentId) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -126,20 +125,19 @@ public class Category implements Serializable {
         this.type = type;
     }
     
-
-    public int getImage() {
+	public String getImage() {
 		return image;
 	}
 
-	public void setImage(int image) {
+	public void setImage(String image) {
 		this.image = image;
 	}
 
-	public int getImages() {
+	public String getImages() {
 		return images;
 	}
 
-	public void setImages(int images) {
+	public void setImages(String images) {
 		this.images = images;
 	}
 

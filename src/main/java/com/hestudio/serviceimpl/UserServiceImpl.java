@@ -12,11 +12,10 @@ import com.hestudio.service.UserService;
 
 @Service
 @Transactional
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
 
 	private UserDAO userDAO;
-	
-	
+
 	public void setUserDAO(UserDAO userDAO) {
 		this.userDAO = userDAO;
 	}
@@ -27,6 +26,10 @@ public class UserServiceImpl implements UserService{
 
 	public List<User> findAllUsers() {
 		return userDAO.getAllUsers();
+	}
+
+	public void updateUser(User user) {
+		userDAO.updateUser(user);
 	}
 
 }

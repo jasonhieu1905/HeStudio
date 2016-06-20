@@ -5,7 +5,7 @@ app.service("loginService", function($http, $q) {
             var url = contextPath + "/users";
             $http({
                 url: url,
-                method: 'GET',
+                method: 'POST',
                 params: info
             }).then(function (result) {
                     defer.resolve(result.data);

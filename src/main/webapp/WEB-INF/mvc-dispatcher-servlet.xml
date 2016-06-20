@@ -21,7 +21,7 @@
 		<property name="url"
 			value="jdbc:mysql://localhost:3306/HeStudio?characterEncoding=UTF-8"></property>
 		<property name="username" value="root"></property>
-		<property name="password" value="root"></property>
+		<property name="password" value=""></property>
 	</bean>
 
 	<bean class="org.springframework.orm.hibernate4.LocalSessionFactoryBean"
@@ -71,6 +71,14 @@
 	</bean>
 
 	<bean id="contactDAO" class="com.hestudio.daoimpl.ContactDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	
+	<bean id="categoryService" class="com.hestudio.serviceimpl.CategoryServiceImpl">
+		<property name="categoryDAO" ref="categoryDAO"></property>
+	</bean>
+
+	<bean id="categoryDAO" class="com.hestudio.daoimpl.CategoryDAOImpl">
 		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
 	</bean>
 

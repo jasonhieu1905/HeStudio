@@ -7,4 +7,5 @@ import com.hestudio.model.User;
 public interface UserDAO {
 	User getUserByUsername(String username);
 	List<User> getAllUsers();
+	void updateUser(User user);
 }

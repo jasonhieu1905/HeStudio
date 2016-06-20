@@ -15,7 +15,7 @@
 		</div>
 		<!-- /.navbar-header -->
 		<admin-header></admin-header>
-		<admin-left></admin-left>	
+		<admin-left></admin-left>
 	</nav>
 	<div id="page-wrapper">
 		<div class="row">
@@ -24,26 +24,29 @@
 			</div>
 		</div>
 		<div id="page-inner">
-			<form id="myform" action="">
+			<form id="adminprofile123" name="adminprofile" action="">
 				<div class="form-group">
-					<label for="name">Username :</label> <input type="text"
-						id="username" 
-						ng-model="username" class="form-control" />
-					<div ng-show="error" class="alert alert-danger">{{errorUsername}}</div>	
+					<label for="name">Username :</label> 
+					<input type="text" name="username" ng-model="username" class="form-control" required/>
+					<div class="alert alert-danger" ng-show="adminprofile.username.$invalid">{{emptyUsername}}</div>
 				</div>
 				<div class="form-group">
 					<label for="name">Password :</label> <input id="password"
-						type="password" 
-						ng-model="password" class="form-control" />
-					<div ng-show="error" class="alert alert-danger">{{errorPassword}}</div>		
+						type="password" ng-model="password" class="form-control" />
+					<div class="alert alert-danger" ng-show="emptyPassword">{{emptyPassword}}
+					</div>
 				</div>
 				<div class="form-group">
 					<label for="name">Password-Retype :</label> <input
-						id="passwordRetype" 
-						type="password" ng-model="passwordRetype" class="form-control" />
-					<div ng-show="error" class="alert alert-danger">{{errorPasswordMatch}}</div>		
+						id="passwordRetype" type="password" ng-model="passwordRetype"
+						class="form-control" />
+					<div class="alert alert-danger" ng-show="emptyRepassword">{{emptyRepassword}}
+					</div>
+					<div class="alert alert-danger" role="alert"
+						ng-show="errorPasswordMatch">{{errorPasswordMatch}}</div>
 				</div>
-				<button type="submit" ng-click="submit($event)" id="updatePassword" class="btn btn-default">Update</button>
+				<button type="button" ng-click="submit()" id="updatePassword"
+					class="btn btn-default">Update</button>
 			</form>
 		</div>
 	</div>

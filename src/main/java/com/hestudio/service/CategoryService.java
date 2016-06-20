@@ -6,4 +6,7 @@ import com.hestudio.model.Category;
 
 public interface CategoryService {
 	List<Category> listCategoryParent();
+	void addCategory(Category category);
+	void updateCategory(Category category);
+	void deleteCategory(Category category);
 }

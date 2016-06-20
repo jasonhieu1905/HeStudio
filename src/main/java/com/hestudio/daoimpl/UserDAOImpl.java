@@ -24,4 +24,8 @@ public class UserDAOImpl extends AbstractDAOImpl implements UserDAO{
 		return getSession().getNamedQuery("User.findAll").list();
 	}
 
+	public void updateUser(User user) {
+		getSession().update(user);
+	}
+
 }
