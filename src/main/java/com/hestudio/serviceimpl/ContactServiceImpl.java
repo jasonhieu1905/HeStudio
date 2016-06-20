@@ -22,4 +22,8 @@ public class ContactServiceImpl implements ContactService{
 		return contactDAO.getContactInfo();
 	}
 
+	public void updateContactInfo(Contact contact) {
+		contactDAO.updateContactInfo(contact);
+	}
+
 }

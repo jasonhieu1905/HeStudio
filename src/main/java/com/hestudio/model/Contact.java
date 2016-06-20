@@ -54,12 +54,15 @@ public class Contact implements Serializable {
     @Basic(optional = false)
     @Column(name = "email")
     private String email;
+    
     @Basic(optional = false)
     @Column(name = "map_x")
     private String mapX;
+    
     @Basic(optional = false)
     @Column(name = "map_y")
     private String mapY;
+    
     @Basic(optional = false)
     @Column(name = "workingtime")
     private String workingtime;

@@ -19,4 +19,8 @@ public class ContactDAOImpl extends AbstractDAOImpl implements ContactDAO{
 		return null;
 	}
 
+	public void updateContactInfo(Contact contact) {
+		getSession().update(contact);
+	}
+
 }

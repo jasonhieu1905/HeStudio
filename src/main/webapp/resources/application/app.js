@@ -23,6 +23,9 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
         .when('/adminprofile', {
             template: "<admin-profile></admin-profile>"
         })
+        .when('/admincontact', {
+            template: "<admin-contact></admin-contact>"
+        })
         .otherwise({
             redirectTo: '/'
         });

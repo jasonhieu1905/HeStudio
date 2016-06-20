@@ -25,8 +25,8 @@
 					class="fa fa-users"></i> Stories</a>
 			<li><a href="#/adminBanner"><i
 					class="fa fa-picture-o"></i> Banner</a></li>
-			<li><a href="#/adminMessage"><i
-					class="fa fa-envelope-o"></i> Hộp thư khách hàng</a></li>
+			<li><a href="#/admincontact"><i
+					class="fa fa-envelope-o"></i> Contact</a></li>
 			<li><a ng-href="#/adminprofile"><i class="fa fa-user"></i>
 					Manage User Profile</a></li>
 		</ul>
