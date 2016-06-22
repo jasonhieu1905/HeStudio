@@ -39,7 +39,7 @@ public class AdminUserController {
 	public ResponseEntity<User> login(@ModelAttribute User user){
 		
 		HttpHeaders httpHeaders = new HttpHeaders();	
-		User loggedUser = userService.findUserByUserName(user.getUsername());
+		User loggedUser = userService.getUserById(user.getId());
 		String newHashPassword = HashPassword.hashPassword(user.getPassword());
 		loggedUser.setUsername(user.getUsername());
 		loggedUser.setPassword(newHashPassword);

@@ -16,6 +16,7 @@ app.directive('login', function (loginService, $location,$cookieStore) {
                     };
                     loginService.loginWithUsername(info).then(function (data) {
                         if(data){
+                        	$cookieStore = $cookieStore;
                         	$cookieStore.put("user",data);
                         	$cookieStore.put("password", $scope.password);
                         	$location.path("/adminhome")
@@ -31,11 +32,13 @@ app.directive('login', function (loginService, $location,$cookieStore) {
 
             }
         },
-        link: function () {
-
+        link: function (scope) {
+        	
         }
     }
+  
 });
+
 
 $(function() {
 
@@ -55,3 +58,4 @@ $(function() {
 	});
 
 });
+

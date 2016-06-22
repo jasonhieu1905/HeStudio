@@ -7,6 +7,10 @@ app.directive(
 						templateUrl : 'resources/application/components/admin_profile/profile.jsp',
 						scope : {},
 						controller : function($scope) {
+							if($cookieStore.get("user") == undefined){
+				        		$location.path("/login")
+				        	}
+							
 							var user = $cookieStore.get("user");
 							$scope.username = user.username;
 							$scope.password = $cookieStore.get("password");
@@ -19,7 +23,12 @@ app.directive(
 									if ($scope.adminprofile[input]
 											&& $scope.adminprofile[input].$pristine) {
 										$scope.adminprofile[input].$pristine = false;
+										return ;
 									}
+								}
+								
+								if($scope.adminprofile.$invalid){
+									return;
 								}
 
 								if ($scope.password != $scope.passwordRetype) {
@@ -29,7 +38,8 @@ app.directive(
 								
 								var info = {
 									username: $scope.username,
-									password: $scope.password
+									password: $scope.password,
+									id : user.id
 								};
 								
 								loginService.updateAdminAccount(info).then(function (data) {

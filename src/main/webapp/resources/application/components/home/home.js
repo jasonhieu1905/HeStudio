@@ -5,7 +5,6 @@ app.directive('home', function () {
         templateUrl: 'resources/application/components/home/home.jsp',
         scope: {},
         controller: function ($scope, $element) {
-
         },
         link: function () {
 

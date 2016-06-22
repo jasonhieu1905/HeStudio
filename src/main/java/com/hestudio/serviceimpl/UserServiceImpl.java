@@ -32,4 +32,8 @@ public class UserServiceImpl implements UserService {
 		userDAO.updateUser(user);
 	}
 
+	public User getUserById(int id) {
+		return userDAO.getUserById(id);
+	}
+
 }

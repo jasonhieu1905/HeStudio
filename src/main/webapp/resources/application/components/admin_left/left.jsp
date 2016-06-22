@@ -14,7 +14,7 @@
 				</div> <!-- /input-group -->
 			</li>
 			<li><a
-				href="#/listAllCategories"><i
+				href="#/adminhome"><i
 					class="fa fa-tasks"></i> Home</a></li>
 			<li><a href="${pageContehxt.request.contextPath}/products"><i
 					class="fa fa-gift"></i> Shop</a></li>

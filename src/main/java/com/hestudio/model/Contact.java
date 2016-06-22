@@ -73,10 +73,16 @@ public class Contact implements Serializable {
     private Integer zoommap;
     @Column(name = "bannerfooter")
     private String bannerfooter;
+    
     @Basic(optional = false)
     @Lob
     @Column(name = "aboutus")
     private String aboutus;
+    
+    @Basic(optional = false)
+    @Column(name = "slogan")
+    private String slogan;
+    
 
     public Contact() {
     }
@@ -85,20 +91,28 @@ public class Contact implements Serializable {
         this.id = id;
     }
 
-    public Contact(Integer id, String companyname, String address, String phone, String email, String mapX, String mapY, String workingtime, String isoimage, String aboutus) {
-        this.id = id;
-        this.companyname = companyname;
-        this.address = address;
-        this.phone = phone;
-        this.email = email;
-        this.mapX = mapX;
-        this.mapY = mapY;
-        this.workingtime = workingtime;
-        this.isoimage = isoimage;
-        this.aboutus = aboutus;
-    }
 
-    public Integer getId() {
+    public Contact(Integer id, String companyname, String address,
+			String phone, String email, String mapX, String mapY,
+			String workingtime, String isoimage, Integer zoommap,
+			String bannerfooter, String aboutus, String slogan) {
+		super();
+		this.id = id;
+		this.companyname = companyname;
+		this.address = address;
+		this.phone = phone;
+		this.email = email;
+		this.mapX = mapX;
+		this.mapY = mapY;
+		this.workingtime = workingtime;
+		this.isoimage = isoimage;
+		this.zoommap = zoommap;
+		this.bannerfooter = bannerfooter;
+		this.aboutus = aboutus;
+		this.slogan = slogan;
+	}
+
+	public Integer getId() {
         return id;
     }
 
@@ -194,7 +208,15 @@ public class Contact implements Serializable {
         this.aboutus = aboutus;
     }
 
-    @Override
+    public String getSlogan() {
+		return slogan;
+	}
+
+	public void setSlogan(String slogan) {
+		this.slogan = slogan;
+	}
+
+	@Override
     public int hashCode() {
         int hash = 0;
         hash += (id != null ? id.hashCode() : 0);

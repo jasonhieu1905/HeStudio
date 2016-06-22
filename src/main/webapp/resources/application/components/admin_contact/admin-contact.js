@@ -1,12 +1,17 @@
-app.directive(
+app
+		.directive(
 				'adminContact',
-				function(contactService, $cookieStore) {
+				function(contactService, $cookieStore, $location) {
 					return {
 						restrict : 'AE',
 						replace : true,
 						templateUrl : 'resources/application/components/admin_contact/contact.jsp',
 						scope : {},
 						controller : function($scope, $cookieStore) {
+							if ($cookieStore.get("user") == undefined) {
+								$location.path("/login")
+							}
+
 							var user = $cookieStore.get("user");
 							$scope.username = user.username;
 							$scope.password = $cookieStore.get("password");
@@ -24,7 +29,8 @@ app.directive(
 								isoimage : "",
 								zoommap : "",
 								bannerfooter : "",
-								aboutus : ""
+								aboutus : "",
+								slogan : ""
 
 							};
 
@@ -32,8 +38,9 @@ app.directive(
 									.getContactInfo()
 									.then(
 											function(data) {
+												debugger;
 												$scope.contact = data;
-
+												loadJTEComponents();
 											},
 											function(reson) {
 												$scope.errorMessage = "Can not get contact Info"
@@ -54,3 +61,16 @@ app.directive(
 						}
 					}
 				});
+
+function loadJTEComponents(){
+	$('.jqte-test').jqte();
+
+	// settings of status
+	var jqteStatus = true;
+	$(".status").click(function() {
+		jqteStatus = jqteStatus ? false : true;
+		$('.jqte-test').jqte({
+			"status" : jqteStatus
+		})
+	});
+}

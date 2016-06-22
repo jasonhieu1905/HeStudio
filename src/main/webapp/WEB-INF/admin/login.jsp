@@ -20,7 +20,7 @@
 
 <title>Login Page</title>
 </head>
-<body ng-app="myApp" class="ng-cloak">
+<body ng-app="myApp" class="ng-cloak" style="padding-top: 90px !important" >
 	<div class="container" ng-controller="UserController as ctrl">
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3">

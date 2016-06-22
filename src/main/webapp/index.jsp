@@ -35,6 +35,13 @@
 <link rel="stylesheet"
 	href="<c:url value='resources/css/admin/timeline.css'/>"
 	type="text/css">
+<link rel="stylesheet"
+	href="<c:url value='resources/css/admin/jquery_jte/jquery-jte.css'/>"
+	type="text/css">	
+<link rel="stylesheet"
+	href="<c:url value='resources/css/admin/jquery_jte/jquery-te-1.4.0.css'/>"
+	type="text/css">	
+
 
 <!-- Link To Customer -->
 <link rel="stylesheet"
@@ -44,7 +51,7 @@
 	var contextPath = "/HeStudio"
 </script>
 </head>
-<body ng-controller="appCtrl">
+<body ng-controller="appCtrl" style="padding-top: 0px">
 
 	<div ng-view></div>
 
@@ -74,6 +81,7 @@
 	<script src="<c:url value='resources/js/admin/morris.min.js' />"></script>
 	<script src="<c:url value='resources/js/admin/raphael-min.js' />"></script>
 	<script src="<c:url value='resources/js/admin/sb-admin-2.js' />"></script>
+	<script src="<c:url value='resources/js/admin/jquery_jte/jquery-te-1.4.0.min.js' />"></script>
 
 
 	<!-- Link to Customer -->

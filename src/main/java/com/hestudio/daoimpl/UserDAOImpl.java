@@ -28,4 +28,13 @@ public class UserDAOImpl extends AbstractDAOImpl implements UserDAO{
 		getSession().update(user);
 	}
 
+	public User getUserById(int id) {
+		@SuppressWarnings("unchecked")
+		List<User> users = getSession().getNamedQuery("User.findById").setParameter("id", id).list();
+		if(users.size() != 0){
+			return users.get(0);
+		}
+		return null;
+	}
+
 }
