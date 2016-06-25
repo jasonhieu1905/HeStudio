@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
 <div id="wrapper">
 	<!-- Navigation -->
 	<nav class="navbar navbar-default navbar-static-top" role="navigation"
@@ -59,7 +60,7 @@
 						<label for="number">Latitude :</label> <input id="mapX"
 							name="mapX" type="text" ng-model="contact.mapX"
 							class="form-control" required />
-						<div ng-show="myform.mapY.$invalid && !myform.mapY.$pristine"
+						<div ng-show="myform.mapX.$invalid && !myform.mapX.$pristine"
 							class="alert alert-danger">Latitude is required</div>
 					</div>
 					<div class="col-md-6">
@@ -82,22 +83,26 @@
 					<label for="number">Zoom map :</label> <input id="zoommap"
 						name="zoommap" type="number" ng-model="contact.zoommap"
 						class="form-control" required />
-					<div ng-show="myform.zommmap.$invalid && !myform.zoommap.$pristine"
+					<div ng-show="myform.zoommap.$invalid && !myform.zoommap.$pristine"
 						class="alert alert-danger">Zoom map is required</div>
 				</div>
 				<div class="form-group">
 					<label for="number">Banner Footer :</label> TBC
 				</div>
 				<div class="form-group">
-					<label for="number">About Us :</label> <input type="text"
-						ng-model="contact.aboutus" name="aboutus" class="jqte-test" required="required"
-						/>
+					<label for="number">About Us :</label>
+					<div text-angular="text-angular" name="aboutus"
+						ng-model="contact.aboutus" ta-disabled='disabled' required></div>
+					<div ng-show="myform.aboutus.$invalid && !myform.aboutus.$pristine"
+						class="alert alert-danger">About us is required</div>
 				</div>
 
 				<div class="form-group">
-					<label for="number">Slogan :</label> <input type="text"
-						ng-model="contact.slogan" name="slogan" class="jqte-test" required="required"
-						 />
+					<label for="number">Slogan :</label>
+					<div text-angular="text-angular" name="slogan"
+						ng-model="contact.slogan" ta-disabled='disabled' required></div>
+					<div ng-show="myform.slogan.$invalid && !myform.slogan.$pristine"
+						class="alert alert-danger">Slogan is required</div>
 				</div>
 
 				<button type="submit" ng-click="submit($event)" id="updatePassword"

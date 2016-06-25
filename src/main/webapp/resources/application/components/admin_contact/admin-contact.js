@@ -11,7 +11,7 @@ app
 							if ($cookieStore.get("user") == undefined) {
 								$location.path("/login")
 							}
-
+							
 							var user = $cookieStore.get("user");
 							$scope.username = user.username;
 							$scope.password = $cookieStore.get("password");
@@ -40,7 +40,6 @@ app
 											function(data) {
 												debugger;
 												$scope.contact = data;
-												loadJTEComponents();
 											},
 											function(reson) {
 												$scope.errorMessage = "Can not get contact Info"
@@ -54,6 +53,15 @@ app
 										$scope.myform[input].$pristine = false;
 									}
 								}
+								if($scope.myform.$invalid){
+									return;
+								}
+								
+								contactService.updateContact($scope.contact).then(function (data) {
+									$location.path("/admincontact");
+			                    },function(reson){
+			                    	$scope.errorMessage = "Can not update contact";
+			                    });
 							}
 						},
 						link : function() {
@@ -62,15 +70,3 @@ app
 					}
 				});
 
-function loadJTEComponents(){
-	$('.jqte-test').jqte();
-
-	// settings of status
-	var jqteStatus = true;
-	$(".status").click(function() {
-		jqteStatus = jqteStatus ? false : true;
-		$('.jqte-test').jqte({
-			"status" : jqteStatus
-		})
-	});
-}

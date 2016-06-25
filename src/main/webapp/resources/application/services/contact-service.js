@@ -13,6 +13,21 @@ app.service("contactService", function($http, $q) {
                 }
             );
             return defer.promise;
+		},
+		updateContact : function(info) {
+            var defer = $q.defer();
+            var url = contextPath + "/updateContact";
+            $http({
+                url: url,
+                method: 'POST',
+                params : info
+            }).then(function (result) {
+                    defer.resolve(result.data);
+                }, function (error) {
+                    defer.reject(error);
+                }
+            );
+            return defer.promise;
 		}
 
 	}

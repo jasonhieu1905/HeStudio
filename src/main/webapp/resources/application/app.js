@@ -1,6 +1,6 @@
 'use strict';
  
-var app = angular.module('hestudio',['ngRoute','ngCookies']);
+var app = angular.module('hestudio',['ngRoute','ngCookies','textAngular']);
 
 app.controller('appCtrl', function ($rootScope,$location,loginService) {
 	

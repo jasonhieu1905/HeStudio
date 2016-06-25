@@ -8,6 +8,8 @@ app.directive('adminhome', function ($location,$cookieStore) {
         	if($cookieStore.get("user") == undefined){
         		$location.path("/login")
         	}
+        	$scope.data = '<h2>Try me!</h2>';
+			$scope.disableForm = false;
         },
         link: function () {
 
