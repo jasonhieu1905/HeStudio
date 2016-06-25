@@ -10,7 +10,7 @@ module.exports = function(grunt) {
         meta: {
             basePath: '../',
             srcPath: '../components/**/',
-            deployPath: '../components/**/'
+            deployPath: '../components/'
         },
  
         banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
@@ -22,9 +22,9 @@ module.exports = function(grunt) {
             dist: {
                 files: {
 					'../app.css':'../app.scss',
-                    '<%= meta.deployPath %>home.css': '<%= meta.srcPath %>home.scss',
-					'<%= meta.deployPath %>login.css': '<%= meta.srcPath %>login.scss',
-					'<%= meta.deployPath %>header-page.css': '<%= meta.srcPath %>header-page.scss'
+                    '<%= meta.deployPath %>home/home.css': '<%= meta.srcPath %>home.scss',
+					'<%= meta.deployPath %>login/login.css': '<%= meta.srcPath %>login.scss',
+					'<%= meta.deployPath %>header-page/header-page.css': '<%= meta.srcPath %>header-page.scss'
                 }
             }
         },
@@ -32,7 +32,7 @@ module.exports = function(grunt) {
         watch: {
             scripts: {
                 files: [
-                    '<%= meta.srcPath %>*.scss',
+                    '<%= meta.srcPath %>**/*.scss',
 					'../*.scss'
                 ],
                 tasks: ['sass']
