@@ -16,7 +16,7 @@
 
 <!-- Link to Admin -->
 <link rel="stylesheet"
-	href="<c:url value='resources/application/components/login/login.css'/>"
+	href="<c:url value='resources/application/components/login/login.scss'/>"
 	type="text/css">
 <link rel="stylesheet"
 	href="<c:url value='resources/application/components/home/home.css'/>"
@@ -37,6 +37,9 @@
 	type="text/css">
 <link rel="stylesheet"
 	href="<c:url value='resources/css/admin/texteditor.css'/>"
+	type="text/css">
+<link rel="stylesheet"
+	href="<c:url value='resources/css/admin/ngTable/ng-table.min.css'/>"
 	type="text/css">
 
 <!-- Link To Customer -->
@@ -73,6 +76,8 @@
 		src="<c:url value='resources/application/components/admin_profile/admin-profile.js' />"></script>
 	<script
 		src="<c:url value='resources/application/components/admin_contact/admin-contact.js' />"></script>
+	<script
+		src="<c:url value='resources/application/components/admin_banner/admin-banner.js' />"></script>
 
 	<!-- Link to Admin Resources -->
 	<script src="<c:url value='resources/js/admin/metisMenu.min.js' />"></script>
@@ -83,6 +88,8 @@
 		src="<c:url value='resources/js/admin/texteditor/textAngular.min.js' />"></script>
 	<script
 		src="<c:url value='resources/js/admin/texteditor/textAngular-sanitize.min.js' />"></script>
+	<script
+		src="<c:url value='resources/js/admin/ngTable/ng-table.js' />"></script>
 
 	<!-- Link to Customer -->
 	<script
@@ -97,6 +104,8 @@
 		src="<c:url value='resources/application/services/login-service.js' />"></script>
 	<script
 		src="<c:url value='resources/application/services/contact-service.js' />"></script>
+	<script
+		src="<c:url value='resources/application/services/banner-service.js' />"></script>
 
 
 </body>

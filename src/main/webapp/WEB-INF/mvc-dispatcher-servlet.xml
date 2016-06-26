@@ -81,6 +81,14 @@
 	<bean id="categoryDAO" class="com.hestudio.daoimpl.CategoryDAOImpl">
 		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
 	</bean>
+	
+	<bean id="bannerService" class="com.hestudio.serviceimpl.BannerServiceImpl">
+		<property name="bannerDAO" ref="bannerDAO"></property>
+	</bean>
+
+	<bean id="bannerDAO" class="com.hestudio.daoimpl.BannerDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
 
 	<tx:annotation-driven transaction-manager="hibernateTransactionManager" />
 

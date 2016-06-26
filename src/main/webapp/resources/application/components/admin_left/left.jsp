@@ -23,7 +23,7 @@
 					class="fa fa-map-marker "></i> Trend</a></li>
 			<li><a href="#/adminAllAccess"><i
 					class="fa fa-users"></i> Stories</a>
-			<li><a href="#/adminBanner"><i
+			<li><a href="#/adminbanner"><i
 					class="fa fa-picture-o"></i> Banner</a></li>
 			<li><a href="#/admincontact"><i
 					class="fa fa-envelope-o"></i> Contact</a></li>

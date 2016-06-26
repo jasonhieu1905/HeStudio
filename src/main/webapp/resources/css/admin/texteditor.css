@@ -1,0 +1,22 @@
+#wrapper .ta-editor {
+	min-height: 300px;
+	height: auto;
+	overflow: auto;
+	font-family: inherit;
+	font-size: 100%;
+}
+
+#wrapper .text-editor .btn-group {
+	padding: 0;
+	margin: 0;
+}
+
+#wrapper .text-editor button {
+	width: 40px !important;
+	height: 35px !important;
+}
+
+#wrapper .btn-group {
+	margin-bottom: 30px;
+	margin-top: 10px;
+}
