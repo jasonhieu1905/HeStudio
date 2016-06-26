@@ -6,7 +6,7 @@
 <title>Hestudio</title>
 <link rel="stylesheet"
 	href="<c:url value='resources/css/bootstrap.css'/>" type="text/css">
-<link rel="stylesheet" href="<c:url value='resources/css/app.css'/>"
+<link rel="stylesheet" href="<c:url value='resources/application/app.css'/>"
 	type="text/css">
 <link rel="stylesheet"
 	href="<c:url value='resources/css/font-awesome.css'/>" type="text/css">
