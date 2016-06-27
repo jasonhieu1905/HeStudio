@@ -1,5 +1,4 @@
 module.exports = function(grunt) {
- 
     // Project configuration.
     grunt.initConfig({
  
@@ -24,7 +23,8 @@ module.exports = function(grunt) {
 					'../app.css':'../app.scss',
                     '<%= meta.deployPath %>home/home.css': '<%= meta.srcPath %>home.scss',
 					'<%= meta.deployPath %>login/login.css': '<%= meta.srcPath %>login.scss',
-					'<%= meta.deployPath %>header-page/header-page.css': '<%= meta.srcPath %>header-page.scss'
+					'<%= meta.deployPath %>header-page/header-page.css': '<%= meta.srcPath %>header-page.scss',
+					'<%= meta.deployPath %>object-table/object-table.css': '<%= meta.srcPath %>object-table.scss'
                 }
             }
         },
