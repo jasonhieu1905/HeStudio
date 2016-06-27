@@ -1,0 +1,46 @@
+.object-table{
+		i{
+			font-size: 25px;
+		}
+	.table-row{
+		.order{
+			width:50px;
+		}
+		td{
+			vertical-align: middle
+		}
+	}
+	.control{
+		width: 75px;
+		
+		
+		.fa-pencil{
+			padding-right:10px;
+		}
+	}
+	.add-new{
+		display: flex;
+	    align-items: center;
+	    height: 30px;
+	    justify-content: flex-end;
+	    
+	    .text{
+	    	padding-right:10px;
+	    }
+	}
+	.filter{
+		    display: flex;
+		    margin-bottom: 10px;
+		    align-items: center;
+		    justify-content: flex-end;
+		    input{
+		   	 	width:200px;
+		    }
+	    .title{
+	    	padding-right:10px;
+	    }
+	}
+	[ng-click]{
+		cursor:pointer;
+	}
+}

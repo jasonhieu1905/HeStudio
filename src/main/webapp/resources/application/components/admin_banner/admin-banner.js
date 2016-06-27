@@ -22,11 +22,18 @@ app
 							}, function(reson) {
 								$scope.errorMessage = "Can not get banners"
 							});
-							
-							$scope.toogleRow = function(e){
+
+							$scope.toogleRow = function(e) {
 								$(e.currentTarget).toggleClass('selected');
 							}
-
+							$scope.header=[
+								{name:"col1",id:"name"},
+								{name:"col2",id:"age"},
+							]
+							$scope.data =[
+								{name:"nam",age:"20"},
+								{name:"Hieu",age:"40"}
+							]
 						},
 						link : function($scope) {
 						}

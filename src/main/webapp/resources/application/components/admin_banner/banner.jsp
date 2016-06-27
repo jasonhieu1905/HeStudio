@@ -25,9 +25,7 @@
 			</div>
 		</div>
 		<div id="page-inner">
-
-			
-
+			<object-table header="header" data="data"></object-table>
 		</div>
 	</div>
 </div>

@@ -1,0 +1,30 @@
+.object-table i {
+  font-size: 25px; }
+.object-table .table-row .order {
+  width: 50px; }
+.object-table .table-row td {
+  vertical-align: middle; }
+.object-table .control {
+  width: 75px; }
+  .object-table .control .fa-pencil {
+    padding-right: 10px; }
+.object-table .add-new {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  justify-content: flex-end; }
+  .object-table .add-new .text {
+    padding-right: 10px; }
+.object-table .filter {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+  justify-content: flex-end; }
+  .object-table .filter input {
+    width: 200px; }
+  .object-table .filter .title {
+    padding-right: 10px; }
+.object-table [ng-click] {
+  cursor: pointer; }
+
+/*# sourceMappingURL=object-table.css.map */
