@@ -39,12 +39,15 @@
 	href="<c:url value='resources/css/admin/texteditor.css'/>"
 	type="text/css">
 <link rel="stylesheet"
-	href="<c:url value='resources/css/admin/ngTable/ng-table.min.css'/>"
+	href="<c:url value='resources/css/ui-grid.min.css'/>"
 	type="text/css">
 
 <!-- Link To Customer -->
 <link rel="stylesheet"
 	href="<c:url value='resources/application/components/header-page/header-page.css'/>"
+	type="text/css">
+<link rel="stylesheet"
+	href="<c:url value='resources/application/components/object-table/object-table.css'/>"
 	type="text/css">
 <script>
 	var contextPath = "/HeStudio"
@@ -84,20 +87,15 @@
 	<script src="<c:url value='resources/js/admin/morris.min.js' />"></script>
 	<script src="<c:url value='resources/js/admin/raphael-min.js' />"></script>
 	<script src="<c:url value='resources/js/admin/sb-admin-2.js' />"></script>
-	<script
-		src="<c:url value='resources/js/admin/texteditor/textAngular.min.js' />"></script>
-	<script
-		src="<c:url value='resources/js/admin/texteditor/textAngular-sanitize.min.js' />"></script>
-	<script
-		src="<c:url value='resources/js/admin/ngTable/ng-table.js' />"></script>
-
+	<script src="<c:url value='resources/js/admin/texteditor/textAngular.min.js' />"></script>
+	<script src="<c:url value='resources/js/admin/texteditor/textAngular-sanitize.min.js' />"></script>
+	<script src="<c:url value='resources/js/ui-grid.min.js' />"></script>
+	
 	<!-- Link to Customer -->
-	<script
-		src="<c:url value='resources/application/components/header-page/header-page.js' />"></script>
-	<script
-		src="<c:url value='resources/application/components/home/home.js' />"></script>
-	<script
-		src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-cookies.js"></script>
+	<script src="<c:url value='resources/application/components/header-page/header-page.js' />"></script>
+	<script src="<c:url value='resources/application/components/home/home.js' />"></script>
+	<script src="<c:url value='resources/application/components/object-table/object-table.js' />"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-cookies.js"></script>
 
 	<!-- Link to Service -->
 	<script
