@@ -6,6 +6,8 @@
 <title>Hestudio</title>
 <link rel="stylesheet"
 	href="<c:url value='resources/css/bootstrap.css'/>" type="text/css">
+<link rel="stylesheet"
+	href="<c:url value='resources/css/custom-styles.css'/>" type="text/css">	
 <link rel="stylesheet" href="<c:url value='resources/application/app.css'/>"
 	type="text/css">
 <link rel="stylesheet"
@@ -13,6 +15,8 @@
 <link rel="stylesheet"
 	href="<c:url value='resources/css/slide-down-box-menu-style.css'/>"
 	type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans'
+	rel='stylesheet' type='text/css' />	
 
 <!-- Link to Admin -->
 <link rel="stylesheet"
@@ -70,6 +74,8 @@
 	<script
 		src="<c:url value='resources/application/components/login/login.js' />"></script>
 	<script
+		src="<c:url value='resources/application/components/admin_header_left/admin-header-left.js' />"></script>	
+	<script
 		src="<c:url value='resources/application/components/admin_home/home.js' />"></script>
 	<script
 		src="<c:url value='resources/application/components/admin_header/admin-header.js' />"></script>
@@ -87,14 +93,19 @@
 	<script src="<c:url value='resources/js/admin/morris.min.js' />"></script>
 	<script src="<c:url value='resources/js/admin/raphael-min.js' />"></script>
 	<script src="<c:url value='resources/js/admin/sb-admin-2.js' />"></script>
+	<script
 	<script src="<c:url value='resources/js/admin/texteditor/textAngular.min.js' />"></script>
+	<script
 	<script src="<c:url value='resources/js/admin/texteditor/textAngular-sanitize.min.js' />"></script>
+	<script
 	<script src="<c:url value='resources/js/ui-grid.min.js' />"></script>
 	
 	<!-- Link to Customer -->
 	<script src="<c:url value='resources/application/components/header-page/header-page.js' />"></script>
 	<script src="<c:url value='resources/application/components/home/home.js' />"></script>
+	<script
 	<script src="<c:url value='resources/application/components/object-table/object-table.js' />"></script>
+	<script
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-cookies.js"></script>
 
 	<!-- Link to Service -->

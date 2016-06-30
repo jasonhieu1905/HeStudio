@@ -18,6 +18,7 @@ app
 								} else {
 
 								}
+								var table = $('#example').DataTable();
 
 							}, function(reson) {
 								$scope.errorMessage = "Can not get banners"
